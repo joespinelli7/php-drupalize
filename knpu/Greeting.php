@@ -4,7 +4,7 @@ namespace Batman\Robin;
 
 class Greeting {
     public function getMessage() {
-        echo "No more Hello world!\n";
+        echo "Welcome to Puppy world🐶🌎";
     }
 }
 
