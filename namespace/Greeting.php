@@ -3,11 +3,11 @@
 //w/ namespaces, you typically match the namespace of a class to its directory although it is not required
 namespace Batman\Robin\Spiderman\Superman;
 
-use DateTime;
+//use DateTime;
 
 class Greeting {
     public function getMessage() {
-        echo "Welcome to Pet world🐶🌎";
+        return "welcome to Pet world🐶🌎";
 
 //        DateTime() is a core class but since you're calling in inside of a namespaced class and namespaces work like
 //        directories, you have essentialled moved DateTime to this namespace (Batman\Robin\Spiderman\Superman\DateTime)

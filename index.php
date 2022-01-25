@@ -75,7 +75,7 @@
 //                $welcomeMessage = Batman\Robin\Spiderman\Superman\Greeting();
 //                Just as you would use the absolute path to reference a file in your file system
                 $welcomeMessage = new GreetingClass();
-                $pupCount = 50;
+                $pupCount = rand(50, 200);
 
 //                For core PHP classes, they essentially live in at the root namespace (like a file at the root of your project)
 //                DateTime() is core class
@@ -84,14 +84,13 @@
 
             <h1>
                 <?php
-                    echo $welcomeMessage->getMessage();
+                    echo ucwords($welcomeMessage->getMessage());
                 ?>
             </h1>
 
             <p>Over <?php echo $pupCount ?> pet friends!</p>
             <p>Current date is
                 <?php
-//                    date_format($dt, 'l jS F Y')
                     echo date_format($dt, 'l jS, F Y');
                 ?>
             </p>
