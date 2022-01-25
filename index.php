@@ -89,7 +89,12 @@
             </h1>
 
             <p>Over <?php echo $pupCount ?> pet friends!</p>
-            <p>Current time is <?php echo $dt->getTimestamp() ?></p>
+            <p>Current date is
+                <?php
+//                    date_format($dt, 'l jS F Y')
+                    echo date_format($dt, 'l jS, F Y');
+                ?>
+            </p>
 
             <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
         </div>
