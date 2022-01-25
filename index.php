@@ -66,12 +66,20 @@
     <div class="jumbotron">
         <div class="container">
             <?php
-                require 'knpu/Greeting.php';
+                require 'namespace/Greeting.php';
 
-                use Batman\Robin\Greeting as GreetingClass;
+//                use the 'use' statement as a shortcut for referencing the class name
+                use Batman\Robin\Spiderman\Superman\Greeting as GreetingClass;
 
+//                Instead of the 'use' statement above, you could reference the class this way too:
+//                $welcomeMessage = Batman\Robin\Spiderman\Superman\Greeting();
+//                Just as you would use the absolute path to reference a file in your file system
                 $welcomeMessage = new GreetingClass();
                 $pupCount = 50;
+
+//                For core PHP classes, they essentially live in at the root namespace (like a file at the root of your project)
+//                DateTime() is core class
+                $dt = new DateTime();
             ?>
 
             <h1>
@@ -81,6 +89,7 @@
             </h1>
 
             <p>Over <?php echo $pupCount ?> pet friends!</p>
+            <p>Current time is <?php echo $dt->getTimestamp() ?></p>
 
             <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
         </div>
